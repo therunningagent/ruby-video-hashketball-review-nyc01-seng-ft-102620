@@ -151,7 +151,7 @@ end
 end 
 end
 
-def teams(team_name)
+def team(team_name)
   case team_name
   when "Brooklyn Nets"
     game_hash[:home][:colors]
