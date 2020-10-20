@@ -183,9 +183,15 @@ def team_colors(team_name)
 end 
 
 def player_numbers(team_name)
-  team(team_name)[:players].map do |key, value|
-    value[:number]
+  new_array = []
+  game_hash.each do |loc, team_info|
+   if team_info[:team_name] == team_name
+    team_info[:players].each do |player_info, stat|
+      new_array << player_info[:number]
+    end 
+   end 
   end 
+  new_array
 end 
 
 # * Build a method, `player_stats`, that takes in an argument of a player's name
