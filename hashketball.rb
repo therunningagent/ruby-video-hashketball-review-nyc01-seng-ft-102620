@@ -175,7 +175,7 @@ end
 #   returns an `Array` of the jersey numbers for that team.
 
 def player_numbers(team_name)
-  team(team_names)
+  team(team_name)[:players]
 end 
 
 # * Build a method, `player_stats`, that takes in an argument of a player's name
