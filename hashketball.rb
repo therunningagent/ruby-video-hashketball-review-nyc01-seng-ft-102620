@@ -134,8 +134,8 @@ def num_points_scored(player_name)
     
   team_data.each do |players|
     if players[:player_name] == player_name
-      
+      binding.pry
       return players[:points]
-    binding.pry
+    
   end
 end 
