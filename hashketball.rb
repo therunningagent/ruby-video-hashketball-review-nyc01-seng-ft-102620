@@ -127,8 +127,6 @@ def game_hash
   }
 end
 
-# hashketball #num_points_scored knows the number of points scored by each player
-
 def num_points_scored(player)
   game_hash.each do |location, team_data|
 
@@ -140,14 +138,6 @@ team_data[:players].each do |attribute|
 end 
 end 
 end
-
-# * Build a method, `shoe_size`, that takes in an argument of a player's name and
-#   returns the shoe size for that player.
-
-#   * Think about how you will find the shoe size of the correct player. How can
-#     you check and see if a player's name matches the name that has been passed
-#     into the method as an argument?
-
 
 def shoe_size(player)
   game_hash.each do |location, team_data|
@@ -161,9 +151,6 @@ end
 end 
 end
 
-# * Build a method, `team_colors`, that takes in an argument of the team name and
-#   returns an `Array` of that team's colors.
-
 def team_colors(team_name)
   
   case team_name
@@ -176,6 +163,10 @@ end
 
 # * Build a method, `team_names`, that operates on the game `Hash` to return an
 #   `Array` of the team names.
+
+def team_names
+  
+end 
 
 # * Build a method, `player_numbers`, that takes in an argument of a team name and
 #   returns an `Array` of the jersey numbers for that team.
