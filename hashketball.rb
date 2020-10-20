@@ -161,11 +161,10 @@ end
 end 
 end
 
-
-
-
 # * Build a method, `team_colors`, that takes in an argument of the team name and
 #   returns an `Array` of that team's colors.
+
+
 
 # * Build a method, `team_names`, that operates on the game `Hash` to return an
 #   `Array` of the team names.
