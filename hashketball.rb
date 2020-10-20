@@ -149,7 +149,7 @@ end
 #     into the method as an argument?
 
 
-def shoe_size(player_name)
+def shoe_size(player)
   game_hash.each do |location, team_data|
 
 team_data[:players].each do |attribute|
