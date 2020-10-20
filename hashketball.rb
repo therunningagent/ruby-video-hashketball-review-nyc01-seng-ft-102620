@@ -161,13 +161,7 @@ def team(team_name)
 end 
 
 def team_colors(team_name)
-  
-  case team_name
-  when "Brooklyn Nets"
-    game_hash[:home][:colors]
-  when "Charlotte Hornets"
-    game_hash[:away][:colors]
-  end 
+  team(team_name)
 end 
 
 # * Build a method, `team_names`, that operates on the game `Hash` to return an
