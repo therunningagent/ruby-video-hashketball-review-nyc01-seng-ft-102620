@@ -175,7 +175,8 @@ end
 #   returns an `Array` of the jersey numbers for that team.
 
 def player_numbers(team_name)
-  team(team_name)[:players]
+  team(team_name)[:players].map do |player|
+    binding.pry
 end 
 
 # * Build a method, `player_stats`, that takes in an argument of a player's name
