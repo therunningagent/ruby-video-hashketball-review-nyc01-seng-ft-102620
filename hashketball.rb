@@ -161,7 +161,7 @@ def team(team_name)
 end 
 
 def team_colors(team_name)
-  team(team_name)
+  team(team_name)[:colors]
 end 
 
 # * Build a method, `team_names`, that operates on the game `Hash` to return an
