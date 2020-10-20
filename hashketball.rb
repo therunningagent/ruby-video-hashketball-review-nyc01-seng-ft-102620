@@ -171,6 +171,7 @@ def team_colors(team_name)
     game_hash[:home][:colors]
   when "Charlotte Hornets"
     game_hash[:away][:colors]
+  end 
 end 
 
 # * Build a method, `team_names`, that operates on the game `Hash` to return an
