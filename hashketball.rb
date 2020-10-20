@@ -151,6 +151,8 @@ end
 end 
 end
 
+def team
+
 def team_colors(team_name)
   
   case team_name
