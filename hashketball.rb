@@ -160,7 +160,6 @@ team_data[:players].each do |attribute|
 end 
 end 
 end
-end 
 
 
 
