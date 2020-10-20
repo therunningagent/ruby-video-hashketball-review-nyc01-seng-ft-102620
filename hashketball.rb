@@ -130,6 +130,6 @@ end
 # hashketball #num_points_scored knows the number of points scored by each player
 
 def num_points_scored(player_name)
-  players = game_hhash[:home][:players].concat(game_hash[:away][:players])
+  players = game_hash[:home][:players].concat(game_hash[:away][:players])
   players[player_name]
 end 
