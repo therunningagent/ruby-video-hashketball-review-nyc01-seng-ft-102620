@@ -130,13 +130,6 @@ end
 # hashketball #num_points_scored knows the number of points scored by each player
 
 def num_points_scored(player_name)
-  game_hash.each do |location, team_data|
-    
-  team_data.each do |players|
-    if players[:player_name] == player_name
-      binding.pry
-      return players[:points]
-    end 
-  end
-end 
+  players = game_hhash[:home][:players].concat(game_hash[:away][:players])
+  players[]
 end 
