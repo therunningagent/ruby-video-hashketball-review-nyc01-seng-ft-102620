@@ -165,7 +165,9 @@ end
 #   `Array` of the team names.
 
 def team_names
-  [game_hash[:home][:team_name], game_hash[:away][:team_name]]
+  puts [game_hash[:home][:team_name], game_hash[:away][:team_name]]
+  
+  binding.pry
 end 
 
 # * Build a method, `player_numbers`, that takes in an argument of a team name and
