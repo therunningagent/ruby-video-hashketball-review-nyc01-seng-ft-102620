@@ -155,7 +155,7 @@ def shoe_size(player_name)
 team_data[:players].each do |attribute|
   
   if attribute[:player_name] == player
-    return attribute[:points]
+    return attribute[:shoes]
   end 
 end 
 end 
