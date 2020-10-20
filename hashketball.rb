@@ -194,29 +194,64 @@ def player_numbers(team_name)
   new_array
 end 
 
-# * Build a method, `player_stats`, that takes in an argument of a player's name
-#   and returns a hash of that player's stats.
+def player_stats(players_name)
+  new_hash = {}
+  game_hash.each do |loc, team_info|
+    team_info[:players].each do |player_info, stat|
+      if player_info[:player_name] == players_name
+       new_hash = player_info
+     end 
+   end 
+ end 
+new_hash
+end 
 
-#   * Check out the following example of the expected return value of the
-#     `player_stats` method:
+def big_shoe_rebounds
+  rebounds = 0
+  largest_shoe = 0
+  game_hash.each do |loc, team_info|
+    team_info[:players].each do |player_info, stat|
+      if player_info[:shoe] > largest_shoe
+       largest_shoe = player_info[:shoe]
+        rebounds = player_info[:rebounds] 
+      end 
+    end 
+  end 
+  rebounds
+end 
 
-#   ```bash
-#   player_stats("Alan Anderson")
-#   => { :number => 0,
-#         :shoe => 16,
-#         :points => 22,
-#         :rebounds => 12,
-#         :assists => 12,
-#         :steals => 3,
-#         :blocks => 1,
-#         :slam_dunks => 1
-#       }
-#   ```
+def most_points_scored
+  most_points = 0
+  player = ""
+  game_hash.each do |loc, team_info|
+    team_info[:players].each do |player_info, stat|
+      if player_info[:points] > most_points
+        most_points = player_info[:points]
+        player = player_info[:player_name]
+      end 
+    end 
+  end 
+  player
+end 
 
-# * Build a method, `big_shoe_rebounds`, that will return the number of rebounds
-#   associated with the player that has the largest shoe size. Break this one down
-#   into steps:
-
-#   * First, find the player with the largest shoe size
-#   * Then, return that player's number of rebounds
-#   * Remember to think about return values here.
+def winning_team
+  winner = ""
+  sum1 = 0
+  sum2 = 0
+  game_hash.each do |loc, team_info|
+    if team_info[:team_name] == "Brooklyn Nets"
+    team_info[:players].each do |player_info, stat|
+      sum1 += player_info[:points]
+    
+    else team_info[:team_name] == "Charlotte Hornets"
+      team_info[:players].each do |player_info, stat|
+      sum2 += player_info[:points]
+    end 
+  end
+  if sum1 > sum2
+    winner = "Brooklyn Nets"
+  else 
+    winner = "Charlotte Hornets"
+  end 
+  winner
+end 
