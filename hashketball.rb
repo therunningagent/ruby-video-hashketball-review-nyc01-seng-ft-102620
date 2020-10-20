@@ -166,6 +166,9 @@ end
 
 def team_colors(team_name)
   
+  case team_name
+  when "Brooklyn Nets"
+    game_hash[:home][:colors]
 end 
 
 # * Build a method, `team_names`, that operates on the game `Hash` to return an
