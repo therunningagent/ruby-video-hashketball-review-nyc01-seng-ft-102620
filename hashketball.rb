@@ -153,8 +153,8 @@ end
 
 def team(team_name)
   case team_name
-  when game_hash[:home][:colors]
-  when game_hash[:away][:colors]
+  when game_hash[:home][:team_name]
+  when game_hash[:away][:team_name]
   end
 end 
 
