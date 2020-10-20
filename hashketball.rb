@@ -165,7 +165,7 @@ end
 #   `Array` of the team names.
 
 def team_names
-  
+  [game_hash]
 end 
 
 # * Build a method, `player_numbers`, that takes in an argument of a team name and
