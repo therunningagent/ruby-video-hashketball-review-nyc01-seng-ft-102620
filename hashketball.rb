@@ -127,6 +127,8 @@ def game_hash
   }
 end
 
+# hashketball #num_points_scored knows the number of points scored by each player
+
 def num_points_scored(player_name)
   player[:score]
   binding.pry
